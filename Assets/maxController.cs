@@ -18,6 +18,7 @@ public class maxController : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         if (Input.GetKeyDown (KeyCode.Space) && this.rigid2D.velocity.y == 0) {
+            this.animator.SetTrigger ("JumpTrigger");
             this.rigid2D.AddForce (transform.up * this.jumpForce);
         }
 
@@ -39,6 +40,10 @@ public class maxController : MonoBehaviour {
             transform.localScale = new Vector3 (key, 1, 1);
         }
 
-        this.animator.speed = speedx / 5.0f;
+        if (this.rigid2D.velocity.y == 0) {
+            this.animator.speed = speedx / 8.0f;
+        } else {
+            this.animator.speed = 1.0f;
+        }
     }
 }
