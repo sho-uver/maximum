@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class aController : MonoBehaviour {
+public class maxController : MonoBehaviour {
 
     Rigidbody2D rigid2D;
     Animator animator;
@@ -17,7 +17,7 @@ public class aController : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyDown (KeyCode.Space)) {
+        if (Input.GetKeyDown (KeyCode.Space) && this.rigid2D.velocity.y == 0) {
             this.rigid2D.AddForce (transform.up * this.jumpForce);
         }
 
@@ -39,6 +39,6 @@ public class aController : MonoBehaviour {
             transform.localScale = new Vector3 (key, 1, 1);
         }
 
-        this.animator.speed = speedx / 2.0f;
+        this.animator.speed = speedx / 5.0f;
     }
 }
