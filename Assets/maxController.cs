@@ -45,5 +45,9 @@ public class maxController : MonoBehaviour {
         } else {
             this.animator.speed = 1.0f;
         }
+
+        /*if (Input.GetKeyDown (KeyCode.A)) {
+            this.animator.SetTrigger ("NewTrigger");
+        }*/
     }
 }
