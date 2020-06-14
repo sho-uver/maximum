@@ -49,5 +49,8 @@ public class maxController : MonoBehaviour {
         if (Input.GetKeyDown (KeyCode.A)) {
             this.animator.SetTrigger ("WanTrigger");
         }
+        /*void OnTriggerEnter2D (Collider2D other) {
+            Debug.Log ("touch");
+        }*/
     }
 }
