@@ -6,7 +6,7 @@ public class maxController : MonoBehaviour {
 
     Rigidbody2D rigid2D;
     Animator animator;
-    float jumpForce = 680.0f;
+    float jumpForce = 750.0f;
     float walkForce = 30.0f;
     float maxWalkSpeed = 6.0f;
     float speedx;
@@ -46,8 +46,8 @@ public class maxController : MonoBehaviour {
             this.animator.speed = 1.0f;
         }
 
-        /*if (Input.GetKeyDown (KeyCode.A)) {
-            this.animator.SetTrigger ("NewTrigger");
-        }*/
+        if (Input.GetKeyDown (KeyCode.A)) {
+            this.animator.SetTrigger ("WanTrigger");
+        }
     }
 }
