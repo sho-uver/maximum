@@ -36,8 +36,14 @@ public class maxController : MonoBehaviour {
             this.rigid2D.AddForce (transform.right * key * this.walkForce);
         }
 
-        if (key != 0) {
+        /*if (key != 0) {
             transform.localScale = new Vector3 (key, 1, 1);
+        }
+        */
+        if (key == 1) {
+            transform.localScale = new Vector3 (0.5f, 0.5f, 1);
+        } else if (key == -1) {
+            transform.localScale = new Vector3 (-0.5f, 0.5f, 1);
         }
 
         if (this.rigid2D.velocity.y == 0) {
@@ -49,8 +55,5 @@ public class maxController : MonoBehaviour {
         if (Input.GetKeyDown (KeyCode.A)) {
             this.animator.SetTrigger ("WanTrigger");
         }
-        /*void OnTriggerEnter2D (Collider2D other) {
-            Debug.Log ("touch");
-        }*/
     }
 }
