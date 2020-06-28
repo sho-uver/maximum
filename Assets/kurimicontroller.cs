@@ -13,10 +13,10 @@ public class kurimicontroller : MonoBehaviour {
         this.risu = GameObject.Find ("risurisu");
         this.max = GameObject.Find ("max");
         if (max.transform.position.x < risu.transform.position.x) {
-            transform.position = new Vector3 ((risu.transform.position.x - 3), -1, 3);
+            transform.position = new Vector3 ((risu.transform.position.x - 3), risu.transform.position.y, risu.transform.position.z);
             rigid.AddForce (transform.right * -1 * moveforce);
         } else if (max.transform.position.x > risu.transform.position.x) {
-            transform.position = new Vector3 ((risu.transform.position.x + 3), -1, 3);
+            transform.position = new Vector3 ((risu.transform.position.x + 3), risu.transform.position.y, risu.transform.position.z);
             rigid.AddForce (transform.right * moveforce);
         }
     }
