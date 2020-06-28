@@ -200,7 +200,7 @@ PrefabInstance:
     - target: {fileID: 4795687169902684102, guid: e6d2f45966da645489753d92ea52b851,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.86
+      value: 4.66
       objectReference: {fileID: 0}
     - target: {fileID: 4795687169902684102, guid: e6d2f45966da645489753d92ea52b851,
         type: 3}
@@ -2214,7 +2214,7 @@ GameObject:
   - component: {fileID: 1939537510}
   m_Layer: 0
   m_Name: kurumiGenerator
-  m_TagString: kurumi
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
