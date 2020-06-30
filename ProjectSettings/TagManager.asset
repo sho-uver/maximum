@@ -6,6 +6,7 @@ TagManager:
   tags:
   - wan
   - kurumi
+  - enemy
   layers:
   - Default
   - TransparentFX

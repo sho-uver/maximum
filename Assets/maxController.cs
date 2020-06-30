@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class maxController : MonoBehaviour {
 
@@ -55,5 +56,10 @@ public class maxController : MonoBehaviour {
         if (Input.GetKeyDown (KeyCode.A)) {
             this.animator.SetTrigger ("WanTrigger");
         }
+
+        if (transform.position.y < -10) {
+            SceneManager.LoadScene ("GameOverScene");
+        }
     }
+
 }
